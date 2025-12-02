@@ -41,7 +41,10 @@ export default function Layout() {
           headerShown: true,
           headerTransparent: true,
           headerTitleAlign: "center",
-          title: "",
+          headerBackButtonDisplayMode: "minimal",
+          headerLargeTitleEnabled: true,
+          headerLargeTitleShadowVisible: false,
+          headerLargeTitleStyle: { color: "transparent" },
         }}
       />
       <Stack.Screen

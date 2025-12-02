@@ -1,13 +1,13 @@
+import { Body } from "@/components/ui/body";
 import { useSearch } from "@/hooks/use-search";
 import { Text } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
-export default function TabTwoScreen() {
+export default function Layout() {
   const searchQuery = useSearch();
 
   return (
-    <SafeAreaView>
+    <Body style={{ flex: 1, alignContent: "stretch", height: "100%" }}>
       {searchQuery && <Text>Searching for: {searchQuery}</Text>}
-    </SafeAreaView>
+    </Body>
   );
 }

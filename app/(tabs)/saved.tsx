@@ -7,7 +7,7 @@ import { ThemedView } from "@/components/themed-view";
 import { IconSymbol } from "@/components/ui/icon-symbol";
 import { Fonts } from "@/constants/theme";
 
-export default function Layout() {
+export default function TabTwoScreen() {
   return (
     <>
       <ParallaxScrollView
@@ -28,7 +28,7 @@ export default function Layout() {
               fontFamily: Fonts.rounded,
             }}
           >
-            Home
+            Saved
           </ThemedText>
         </ThemedView>
         <Link href="/[id]" dismissTo={false} asChild>

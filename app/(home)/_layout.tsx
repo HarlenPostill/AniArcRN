@@ -41,8 +41,7 @@ export default function Layout() {
           headerShown: true,
           headerTransparent: true,
           headerTitleAlign: "center",
-          headerLargeTitleEnabled: true,
-          headerLargeTitleShadowVisible: false,
+          title: "",
         }}
       />
       <Stack.Screen

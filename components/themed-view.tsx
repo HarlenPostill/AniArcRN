@@ -6,6 +6,7 @@ export type ThemedViewProps = ViewProps & {
   lightColor?: string;
   darkColor?: string;
   hasBackground?: boolean;
+  useStrokeInstead?: boolean;
 };
 
 export function ThemedView({
@@ -13,6 +14,7 @@ export function ThemedView({
   lightColor,
   darkColor,
   hasBackground,
+  useStrokeInstead = false,
   ...otherProps
 }: ThemedViewProps) {
   const backgroundColor = useThemeColor(
@@ -20,10 +22,19 @@ export function ThemedView({
     "background"
   );
 
+  const strokeColor = useThemeColor(
+    { light: lightColor, dark: darkColor },
+    "background"
+  );
+
   return (
     <View
       style={[
-        { backgroundColor: hasBackground ? backgroundColor : undefined },
+        useStrokeInstead
+          ? {
+              boxShadow: `inset 0 0 0 1.5px ${strokeColor}`,
+            }
+          : { backgroundColor: hasBackground ? backgroundColor : undefined },
         style,
       ]}
       {...otherProps}

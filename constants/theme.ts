@@ -8,15 +8,19 @@ export const Colors = {
     text: "#11181C",
     background: "#F7F9F8",
     tint: tintColorLight,
+    altTint: "#86ADC6",
     tabIconDefault: "#687076",
     tabIconSelected: tintColorLight,
+    lighterGrey: "#DEDEDE",
   },
   dark: {
     text: "#ECEDEE",
     background: "#000",
     tint: tintColorDark,
+    altTint: "#97B9CE",
     tabIconDefault: "#9BA1A6",
     tabIconSelected: tintColorDark,
+    lighterGrey: "#1C1C1E",
   },
 };
 

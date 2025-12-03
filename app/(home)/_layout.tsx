@@ -50,16 +50,11 @@ export default function Layout() {
       <Stack.Screen
         name="modal"
         options={{
-          title: "Modal",
-          headerTitleStyle: {
-            fontWeight: "bold",
-          },
+          title: "Images",
           contentStyle: { backgroundColor: "transparent" },
-          headerLargeTitle: false,
-          headerShown: false,
-          sheetAllowedDetents: [0.25, 0.6],
-          sheetGrabberVisible: true,
-          presentation: "formSheet",
+          headerShown: true,
+          headerTransparent: true,
+          presentation: "modal",
         }}
       />
     </Stack>

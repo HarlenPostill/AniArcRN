@@ -14,7 +14,8 @@ export default function Layout() {
           headerLargeTitleEnabled: true,
           headerLargeTitleShadowVisible: false,
           headerLargeStyle: { backgroundColor: "transparent" },
-          title: "Search",
+          title: "Explore",
+          headerStyle: { backgroundColor: "transparent" },
           headerSearchBarOptions: {},
           headerRight: () => (
             <Pressable
@@ -33,6 +34,18 @@ export default function Layout() {
               />
             </Pressable>
           ),
+        }}
+      />
+      <Stack.Screen
+        name="[id]"
+        options={{
+          headerShown: true,
+          headerTransparent: true,
+          headerTitleAlign: "center",
+          headerBackButtonDisplayMode: "minimal",
+          headerLargeTitleEnabled: true,
+          headerLargeTitleShadowVisible: false,
+          headerLargeTitleStyle: { color: "transparent" },
         }}
       />
     </Stack>

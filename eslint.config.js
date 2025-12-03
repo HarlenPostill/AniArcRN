@@ -6,5 +6,6 @@ module.exports = defineConfig([
   expoConfig,
   {
     ignores: ['dist/*'],
+    plugins: ["@trivago/prettier-plugin-sort-imports"],
   },
 ]);

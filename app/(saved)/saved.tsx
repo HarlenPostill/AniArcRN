@@ -1,12 +1,13 @@
+import { useState } from "react";
+
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
 import { Body } from "@/components/ui/body";
-import { Button, ContextMenu, Host, Picker } from '@expo/ui/swift-ui';
-import { useState } from "react";
+import { Button, ContextMenu, Host, Picker } from "@expo/ui/swift-ui";
 
 export default function Layout() {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  
+
   return (
     <Body>
       <ThemedView style={{ flexGrow: 1, padding: 16 }}>
@@ -16,27 +17,29 @@ export default function Layout() {
             <ContextMenu.Items>
               <Button
                 systemImage="person.crop.circle.badge.xmark"
-                onPress={() => console.log('Pressed1')}>
+                onPress={() => console.log("Pressed1")}
+              >
                 Hello
               </Button>
               <Button
                 variant="bordered"
                 systemImage="heart"
-                onPress={() => console.log('Pressed2')}>
+                onPress={() => console.log("Pressed2")}
+              >
                 Love it
               </Button>
               <Picker
                 label="Doggos"
-                options={['very', 'veery', 'veeery', 'much']}
+                options={["very", "veery", "veeery", "much"]}
                 variant="menu"
                 selectedIndex={selectedIndex}
-                onOptionSelected={({ nativeEvent: { index } }) => setSelectedIndex(index)}
+                onOptionSelected={({ nativeEvent: { index } }) =>
+                  setSelectedIndex(index)
+                }
               />
             </ContextMenu.Items>
             <ContextMenu.Trigger>
-              <Button variant="glass">
-                Show Menu
-              </Button>
+              <Button variant="glass">Show Menu</Button>
             </ContextMenu.Trigger>
           </ContextMenu>
         </Host>

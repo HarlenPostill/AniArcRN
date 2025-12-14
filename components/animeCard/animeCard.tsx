@@ -13,8 +13,15 @@ export default function AnimeCard({ smallCard = false }: AnimeCardProps) {
   const imageRatio = 1.4;
   const imageHeight = smallCard ? 127 * imageRatio : imagewidth * imageRatio;
 
+  const borderRadius = 12;
+
   return (
-    <Link href="/[id]" dismissTo={false} asChild>
+    <Link
+      href="/[id]"
+      dismissTo={false}
+      asChild
+      style={{ borderRadius: borderRadius }}
+    >
       <Link.Trigger>
         <Pressable>
           <Image
@@ -22,8 +29,7 @@ export default function AnimeCard({ smallCard = false }: AnimeCardProps) {
             style={{
               width: imagewidth,
               height: imageHeight,
-              paddingBottom: 6,
-              borderRadius: 12,
+              borderRadius: borderRadius
             }}
           />
         </Pressable>

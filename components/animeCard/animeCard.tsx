@@ -1,6 +1,8 @@
 import { Link } from "expo-router";
 import { Image, Pressable, useWindowDimensions } from "react-native";
 
+import PreviewCard from "./previewCard";
+
 interface AnimeCardProps {
   smallCard?: boolean;
 }
@@ -34,7 +36,13 @@ export default function AnimeCard({ smallCard = false }: AnimeCardProps) {
           />
         </Pressable>
       </Link.Trigger>
-      <Link.Preview />
+      <Link.Preview
+        style={{
+          height: 250
+        }}
+      >
+        <PreviewCard />
+      </Link.Preview>
       <Link.Menu>
         <Link.MenuAction
           title="Plan to Watch"

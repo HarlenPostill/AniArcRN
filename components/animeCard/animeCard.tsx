@@ -1,7 +1,6 @@
+import PreviewCard from "@/components/animeCard/previewCard";
 import { Link } from "expo-router";
 import { Image, Pressable, useWindowDimensions } from "react-native";
-
-import PreviewCard from "./previewCard";
 
 interface AnimeCardProps {
   smallCard?: boolean;

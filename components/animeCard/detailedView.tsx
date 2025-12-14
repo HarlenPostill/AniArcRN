@@ -13,6 +13,8 @@ import {
   useColorScheme
 } from "react-native";
 
+import RateButton from "../ui/rateButton";
+
 export default function DetailedView() {
   const [isExpanded, setIsExpanded] = useState(false);
   const colorScheme = useColorScheme();
@@ -42,35 +44,7 @@ export default function DetailedView() {
             The Boy and the Heron
           </ThemedText>
           <View style={{ flexDirection: "row", gap: 6, alignItems: "center" }}>
-            <ThemedView
-              hasBackground
-              lightColor={Colors.light.tint}
-              darkColor={Colors.dark.tint}
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                padding: 8,
-                borderRadius: 8,
-                gap: 6
-              }}
-            >
-              <IconSymbol
-                name="star.fill"
-                size={18}
-                color={
-                  colorScheme === "dark"
-                    ? Colors.dark.background
-                    : Colors.light.background
-                }
-              />
-              <ThemedText
-                lightColor={Colors.light.background}
-                darkColor={Colors.dark.background}
-                type="defaultSemiBold"
-              >
-                9
-              </ThemedText>
-            </ThemedView>
+            <RateButton />
             <ThemedView
               hasBackground
               useStrokeInstead

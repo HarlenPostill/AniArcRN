@@ -15,13 +15,15 @@ export default function Layout() {
           headerLargeTitleShadowVisible: false,
           headerLargeStyle: { backgroundColor: "transparent" },
           title: "Explore",
+          headerTintColor:
+            colorScheme === "dark" ? Colors.dark.tint : Colors.light.tint,
           headerStyle: { backgroundColor: "transparent" },
           headerSearchBarOptions: {},
           headerRight: () => (
             <Pressable
               style={{
                 marginLeft: 4,
-                marginBottom: 4,
+                marginBottom: 4
               }}
               onPress={() => {
                 console.log("share press");
@@ -33,7 +35,7 @@ export default function Layout() {
                 color={Colors[colorScheme ?? "light"].text}
               />
             </Pressable>
-          ),
+          )
         }}
       />
       <Stack.Screen
@@ -45,7 +47,7 @@ export default function Layout() {
           headerBackButtonDisplayMode: "minimal",
           headerLargeTitleEnabled: true,
           headerLargeTitleShadowVisible: false,
-          headerLargeTitleStyle: { color: "transparent" },
+          headerLargeTitleStyle: { color: "transparent" }
         }}
       />
     </Stack>

@@ -1,10 +1,11 @@
+import React from "react";
+
 import {
   DarkTheme,
   DefaultTheme,
-  ThemeProvider,
+  ThemeProvider
 } from "@react-navigation/native";
 import { Icon, Label, NativeTabs } from "expo-router/build/native-tabs";
-import React from "react";
 import { useColorScheme } from "react-native";
 
 export default function RootLayout() {
@@ -20,6 +21,10 @@ export default function RootLayout() {
         <NativeTabs.Trigger name="(saved)">
           <Icon sf={{ default: "book", selected: "book.fill" }} />
           <Label>Saved</Label>
+        </NativeTabs.Trigger>
+        <NativeTabs.Trigger name="(settings)">
+          <Icon sf="gear" />
+          <Label>Settings</Label>
         </NativeTabs.Trigger>
         <NativeTabs.Trigger name="(search)" role="search">
           <Icon sf="magnifyingglass" />

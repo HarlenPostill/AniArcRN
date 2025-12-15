@@ -15,12 +15,14 @@ export default function Layout() {
           headerLargeTitleShadowVisible: false,
           headerLargeStyle: { backgroundColor: "transparent" },
           headerStyle: { backgroundColor: "transparent" },
+          headerTintColor:
+            colorScheme === "dark" ? Colors.dark.tint : Colors.light.tint,
           title: "Home",
           headerRight: () => (
             <Pressable
               style={{
                 marginLeft: 4,
-                marginBottom: 0,
+                marginBottom: 0
               }}
               onPress={() => {
                 console.log("Random press");
@@ -32,7 +34,7 @@ export default function Layout() {
                 color={Colors[colorScheme ?? "light"].text}
               />
             </Pressable>
-          ),
+          )
         }}
       />
       <Stack.Screen
@@ -44,7 +46,7 @@ export default function Layout() {
           headerBackButtonDisplayMode: "minimal",
           headerLargeTitleEnabled: true,
           headerLargeTitleShadowVisible: false,
-          headerLargeTitleStyle: { color: "transparent" },
+          headerLargeTitleStyle: { color: "transparent" }
         }}
       />
       <Stack.Screen
@@ -54,7 +56,7 @@ export default function Layout() {
           contentStyle: { backgroundColor: "transparent" },
           headerShown: true,
           headerTransparent: true,
-          presentation: "modal",
+          presentation: "modal"
         }}
       />
     </Stack>

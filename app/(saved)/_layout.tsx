@@ -20,6 +20,8 @@ export default function Layout() {
           headerShadowVisible: false,
           headerStyle: { backgroundColor: "transparent" },
           headerLargeStyle: { backgroundColor: "transparent" },
+          headerTintColor:
+            colorScheme === "dark" ? Colors.dark.tint : Colors.light.tint,
           title: "Saved",
           headerRight: () => (
             <Host

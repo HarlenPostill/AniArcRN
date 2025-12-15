@@ -3,7 +3,8 @@ import { useState } from "react";
 import ParallaxScrollView from "@/components/parallax-scroll-view";
 import { ThemedText } from "@/components/themed-text";
 import { ThemedView } from "@/components/themed-view";
-import { IconSymbol } from "@/components/ui/icon-symbol";
+import RateButton from "@/components/ui/rateButton";
+import WatchButton from "@/components/ui/watchButton";
 import { Colors } from "@/constants/theme";
 import {
   Image,
@@ -12,8 +13,6 @@ import {
   View,
   useColorScheme
 } from "react-native";
-
-import RateButton from "../ui/rateButton";
 
 export default function DetailedView() {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -45,34 +44,7 @@ export default function DetailedView() {
           </ThemedText>
           <View style={{ flexDirection: "row", gap: 6, alignItems: "center" }}>
             <RateButton />
-            <ThemedView
-              hasBackground
-              useStrokeInstead
-              lightColor={Colors.light.tint}
-              darkColor={Colors.dark.tint}
-              style={{
-                flexDirection: "row",
-                alignItems: "center",
-                padding: 8,
-                borderRadius: 8,
-                gap: 6
-              }}
-            >
-              <ThemedText
-                lightColor={Colors.light.tint}
-                darkColor={Colors.dark.tint}
-                type="defaultSemiBold"
-              >
-                Add to List
-              </ThemedText>
-              <IconSymbol
-                name="plus"
-                size={18}
-                color={
-                  colorScheme === "dark" ? Colors.dark.tint : Colors.light.tint
-                }
-              />
-            </ThemedView>
+            <WatchButton totalEpisodes={12} />
           </View>
         </View>
       </View>
